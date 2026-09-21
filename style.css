@@ -233,27 +233,30 @@ body {
    ========================================= */
 .letter-container {
     position: absolute;
-    top: 130px; /* Lo separa del título */
+    top: 130px; 
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
     max-width: 500px;
-    height: 45vh; /* Ocupa un porcentaje de la pantalla para no tapar las flores */
-    background: rgba(0, 0, 0, 0.25); /* Fondo oscuro semitransparente para que la letra resalte */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde sutil */
-    border-radius: 15px; /* Bordes redondeados */
+    
+    /* AQUI CAMBIAMOS LA ALTURA */
+    height: 30vh; /* Antes estaba en 45vh, ahora es más corta */
+    
+    background: rgba(0, 0, 0, 0.25); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 15px; 
     padding: 20px;
-    overflow-y: auto; /* ESTO ES LO QUE CREA EL SCROLL */
-    color: #ffffff; /* Color de la letra */
-    font-size: 1.2rem; /* Tamaño de letra legible (no muy pequeño) */
+    overflow-y: auto; 
+    color: #ffffff; 
+    font-size: 1.2rem; 
     font-family: 'Arial', sans-serif;
-    line-height: 1.6; /* Espaciado entre líneas para mejor lectura */
-    z-index: 15; /* Asegura que la carta esté por encima de las luces de fondo */
+    line-height: 1.6; 
+    z-index: 15; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    text-align: center; /* Puedes cambiarlo a 'left' si prefieres el texto alineado a la izquierda */
+    text-align: center; 
 }
 
-/* Opcional: Personalizar la barra de scroll para que se vea bonita y combine */
+/* (El código del scrollbar se queda igual) */
 .letter-container::-webkit-scrollbar {
     width: 8px;
 }
@@ -262,18 +265,18 @@ body {
     border-radius: 10px;
 }
 .letter-container::-webkit-scrollbar-thumb {
-    background: #ffbb00; /* Color amarillo/naranja para combinar con los girasoles */
+    background: #ffbb00; 
     border-radius: 10px;
 }
 
-/* Ajuste responsive para celulares muy pequeños */
+/* Ajuste responsive para celulares */
 @media (max-width: 720px) {
     .letter-container {
-        top: 90px; /* Sube un poco la carta ya que el título se hace más pequeño */
-        height: 50vh; /* Le da un poco más de espacio a la carta en celulares */
+        top: 100px; /* Lo bajamos un poquitito para que no tape los emojis */
+        
+        /* AQUI TAMBIÉN CAMBIAMOS LA ALTURA PARA CELULARES */
+        height: 35vh; /* Antes estaba en 50vh */
+        
         font-size: 1.1rem;
     }
 }
-
-
-
